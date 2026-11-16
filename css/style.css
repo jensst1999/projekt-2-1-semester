@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+font-size: 25px;
+color: #294c50;
+}
+
+.over-tekst {
+    background-color: #dce6e3;
+    padding: 30px 20px;
+    border-top-style: groove;
+    border-bottom-style: groove;
+    border-color: #294c50;
+}
+
+img {
+width: 100%;
+display: block;
+height: auto;
+
+}
+
+a {
+    color: #294c50;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    background-color: #294c50;
+    color: #ffffff;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: larger;
+    outline: #333;
+    outline-width: 1em;
+}
+
+.middel-tekst {
+    background-color: #dce6e3;
+    padding: 30px 20px;
+    border-top-style: groove;
+    border-color: #294c50;
+}
+
+h2 {
+    font-size: 25px;
+    color: #294c50;
+}
+
+.info {
+    display: inline-block;
+    background-color: #294c50;
+    color: #ffffff;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: larger;
+    outline: #333;
+    outline-width: 1em;
+}
+
+footer {
+    background-color: #dce6e3;
+    padding: 2em 0.5em;
+    border-color: #294c50;
+    border-top-style: groove;
+}
+/*Hop ned til hovedinhold. Kode fra: https://www.a11y-collective.com/blog/skip-to-main-content/*/
+.screen-reader-text {
+  position: absolute; /*Positions the link absolutely on the page, allowing it to be placed anywhere.*/
+  left: -9999px; /*Moves the link far off-screen to the left, making it invisible to sighted users.*/
+  z-index: 999; /*Sets a high z-index, ensuring that the link will be on top of other page elements if it becomes visible.*/
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0; /*Sets the link's opacity to 0, making it fully transparent and invisible.*/
+}
+ 
+.screen-reader-text:focus {
+  left: 50%; /* When the link receives focus (e.g., when a keyboard user tabs to it), it is repositioned horizontally to the centre of the screen.*/
+  transform: translateX(-50%); /*This centres the link horizontally by moving it back to the left by 50% of its own width.*/
+  opacity: 1; /*The link's opacity is set to 1, making it fully visible.*/
+}
+
+nav {
+    color: #333;
+    height: 4em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  nav ul.show {
+    display: block;
+  }
+
+  nav a {
+    color: #333;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  nav ul a:hover {
+    color: #2e7386;
+  }
+  
+  .active {
+    color: #2e7386;
+  }
+
+  .logo-img {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+  }
+  @media screen and (max-width: 768px) {
+    header:nth-of-type(1) {
+      display: inline;
+    }
+    nav {
+      color: #2e7386;
+    }
+    nav #bars {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      font-size: 2.3em;
+      color: #2e7386;
+      cursor: pointer;
+    }
+    nav ul {
+      display: none;
+      height: auto;
+      border-top: 4px solid #2e7386;
+      flex-direction: column;
+    }
+    nav ul li {
+      display: flex;
+    }
+    nav .show {
+      display: flex;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      padding: 0;
+      background-color: #ffffff;
+      width: 100%;
+      z-index: 1;
+    }
+

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Hop ned til hovedinhold. Kode fra: https://www.a11y-collective.com/blog/skip-to-main-content/*/
+.screen-reader-text {
+  position: absolute; /*Positions the link absolutely on the page, allowing it to be placed anywhere.*/
+  left: -9999px; /*Moves the link far off-screen to the left, making it invisible to sighted users.*/
+  z-index: 999; /*Sets a high z-index, ensuring that the link will be on top of other page elements if it becomes visible.*/
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0; /*Sets the link's opacity to 0, making it fully transparent and invisible.*/
+}
+ 
+.screen-reader-text:focus {
+  left: 50%; /* When the link receives focus (e.g., when a keyboard user tabs to it), it is repositioned horizontally to the centre of the screen.*/
+  transform: translateX(-50%); /*This centres the link horizontally by moving it back to the left by 50% of its own width.*/
+  opacity: 1; /*The link's opacity is set to 1, making it fully visible.*/
+}
+
+nav {
+    color: #333;
+    height: 4em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  nav ul.show {
+    display: block;
+  }
+
+  nav a {
+    color: #333;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  nav ul a:hover {
+    color: #2e7386;
+  }
+  
+  .active {
+    color: #2e7386;
+  }
+
+  @media screen and (max-width: 768px) {
+    header:nth-of-type(1) {
+      display: inline;
+    }
+    nav {
+      color: #2e7386;
+    }
+    nav #bars {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      font-size: 2.3em;
+      color: #2e7386;
+      cursor: pointer;
+    }
+    nav ul {
+      display: none;
+      height: auto;
+      border-top: 4px solid #2e7386;
+      flex-direction: column;
+    }
+    nav ul li {
+      display: flex;
+    }
+    nav .show {
+      display: flex;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      padding: 0;
+      background-color: #ffffff;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+

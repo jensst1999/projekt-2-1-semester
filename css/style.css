@@ -1,12 +1,15 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
 font-size: 25px;
-color: #294c50;
+color: black;
+text-decoration-line: underline;
 }
+
 
 .over-tekst {
     background-color: #dce6e3;
@@ -19,12 +22,16 @@ color: #294c50;
 img {
 width: 100%;
 height: auto;
-
 }
 
 a {
-    color: #294c50;
-    text-decoration: none;
+ color: black;
+ text-decoration: none;
+}
+
+
+a:active {
+  color:#2e7386;
 }
 
 .button {
@@ -57,12 +64,13 @@ a {
 }
 h2 {
     font-size: 25px;
-    color: #294c50;
+    color: black;
 }
 
 .web-hjælp{
   border-bottom-style: groove;
   border-color: #294c50;
+  background-color: #dce6e3;
 }
 
 .hjem-vej {
@@ -71,6 +79,7 @@ h2 {
   align-items: center;
   border: #294c50;
   border-bottom-style: groove;
+  background-color: #dce6e3;
 }
 
 .hyperlink {
@@ -78,6 +87,8 @@ h2 {
   align-items:center;
   flex-direction: column;
   font-size: larger;
+  color: #294c50;
+  background-color: #dce6e3;
 }
 
 
@@ -166,9 +177,10 @@ nav {
     justify-content: flex-start;
   }
   @media screen and (max-width: 768px) {
-    header:nth-of-type(1) {
+    header:nth-of-type(1) 
       display: inline;
     }
+
     nav {
       color: #2e7386;
     }
@@ -199,4 +211,3 @@ nav {
       width: 100%;
       z-index: 1;
     }
-

@@ -5,7 +5,6 @@
 
 
 .kontakt-information {
- {
   /* Center the form on the page */
   text-align: center;
 }
@@ -66,5 +65,4 @@ button {
      between the labels and their text fields */
   margin-left: 0.5em;
   
-}
 }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om ensomhed</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/formstyle.css">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/4b9831ba9b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#hovedindhold" class="screen-reader-text"></a>
+         <nav>
+        <a href="/html/index-forside.html">Fællesskab.dk</a>
+        <!-- Navigation -->
+        <!-- Bars -->
+        <button
+          id="bars"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="åbn navigation"
+        >
+          <!-- aria-expanden fortæller skærmoplæseren at menuen er lukket-->
+          <!--aria-label giver skærmlæseren en besked om hvad knappen gør-->
+          <!--button gør menuen trykbar så den kan åbnes via tastatur-->
+          <!--aria-controls fortæller skærmoplæseren at menuen er styret af knappen-->
+          <i class="fa-solid fa-bars"></i>
+        </button>
+ 
+        <!--Navigation-->
+        <ul id="menu">
+          <!-- id="menu" references the button with aria-controls -->
+          <li><a class="active" href="/html/index-forside.html">Forside</a></li>
+          <li><a href="/html/ensomhed.html">Ensomhed</a></li>
+          <li><a href="/html/fællesskab.html">Fællesskab</a></li>
+          <li><a href="/html/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+        <section class="over-tekst">
+            <h1>Kom i kontakt med os</h1>
+
+            <p>Har du nogle spørgsmål eller forslag så kan du altid kontakte os gennem denne formular.</p>
+        </section>
+
+        <section class="kontakt-formular.">
+            <div class="kontakt-information">
+                <h2>kontakt formular</h2>
+                <p>Har du spørgsmål eller brug for vejledning? eller bare et godt forslag så kan du kontakte os gennem denne formular</p>
+
+                <p>
+                    <strong>E-mail</strong>
+                    <a href="mailto:kontakt@fællesskab.dk">kontakt@fællesskab.dk</a>
+                </p>
+            </div>
+
+            <div class="kontakt-information">
+                <h2>Kontakt os her</h2>
+                <form action="/min-kontaktform-håndterings-side" method="post">
+                <p>
+                    <label for="name">Navn</label>
+                    <input type="text" id="name" name="user_name"/>
+                </p>
+
+                <p>
+                    <label for="mail">E-mail</label>
+                    <input type="email" id="mail" name="user_email"/>
+                </p>
+
+                <p>
+                    <label for="msg">Besked</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </p>
+
+                <p class="kontakt-button">
+                    <button type="submit">Send din besked her</button>
+                </p>
+            </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-tooter">
+        <div>
+            <h3>Fællesskab</h3>
+            <p>Find et fællesskab</p>
+        </div>
+
+        <div>
+            <h3>Kontakt</h3>
+            <p>Kom i kontakt med os</p>
+            <p>Telefon</p>
+            <p>Mail</p>
+        </div>
+
+        <div>
+            <h3>Ensomhed</h3>
+            <p>Lær om ensomhed</p>
+        </div>
+    </footer>
+</body>
+</html>
